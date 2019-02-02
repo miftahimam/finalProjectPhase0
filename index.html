@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+
+	<title>Tip Calculator</title>
+</head>
+<body>
+
+	<p id="title" class="mainPStyle">Tip Calculator</p>
+	<form id="mainbox" name="tipForm" action="" method="post">
+
+		<p class="mainPStyle">How much is you bill?</p>
+		<input id="bill" type="text" name="totalbill" placeholder="ex: 50000 " autocomplete="off">
+		<p id="billMustNum" class="falsePStyle"></p>
+		<p id="blankBill" class="falsePStyle"></p>
+
+		<p class="mainPStyle">How's the service according to you?</p>
+		<select id="dropdown" name="service" autocomplete="off">	
+			<option id="choose" value="choose">Choose One</option>
+			<option id="great" value="great">Great</option>
+			<option id="good" value="good">Good</option>
+			<option id="notBad" value="notBad">Not Bad</option>
+			<option id="bad" value="bad">Bad</option>
+			<option id="reallyBad" value="reallyBad">Really Bad</option>
+		</select>
+		<p id="blankService" class="falsePStyle"></p>
+
+		<p class="mainPStyle">How many people are sharing the bill?</p>
+		<input id="people" type="number" name="people" placeholder="ex: 1 ">
+		<br>
+		<p id="blankPeople" class="falsePStyle"></p>
+
+		<button id="submitBtn" onclick="return submitForm(event)">Submit</button>
+		<button id="resetBtn" onclick="window.location.reload()">Reset</button>
+	<p id="answer" class="truePStyle"></p>
+		
+	</form>
+
+</body>
+</html>
